@@ -1,0 +1,48 @@
+{
+	"log": [
+        {
+            "type": "ai",
+	    "content": "hellow!"
+        },
+        {
+            "type": "human",
+            "content": "hi!!"
+        },
+        {
+            "type": "ai",
+            "content": "how r u?"
+        },
+        {
+            "type": "human",
+            "content": "fine"
+        },
+        {
+            "type": "ai",
+            "content": "cool!"
+        },
+        {
+            "type": "human",
+            "content": "and u?"
+        },
+        {
+            "type": "ai",
+            "content": "fine"
+        },
+        {
+            "type":"human",
+            "content": "what is 9 + 10"
+        },
+        {
+            "type": "ai",
+            "content": "21 ofc"
+        }, 
+        {
+            "type": "human",
+            "content": "cool and 2 + 2?"
+        },
+        {
+            "type": "ai",
+            "content": "fish"
+        }
+    ]
+}

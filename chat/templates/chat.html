@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %} Hyperion {% endblock %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/chat.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="chat_log">
+  {% for message in chat_data.log %}
+  <div class="message">
+    {% if message.type == "human" %}
+    <div class="container">
+      <div class="item">
+        <svg width="30" height="30">
+          <circle cx="15" cy="15" r="15" fill="red" />
+        </svg>
+      </div>
+      <div class="item">
+        <p>Human</p>
+      </div>
+    </div>
+    <p>{{ message.content }}</p>
+    {% endif %}
+
+    {% if message.type == "ai" %}
+    <div class="container">
+      <div class="item">
+        <svg width="30" height="30">
+          <circle cx="15" cy="15" r="15" fill="blue" />
+        </svg>
+      </div>
+      <div class="item">
+        <p>AI</p>
+      </div>
+    </div>
+    <p>{{ message.content }}</p>
+    {% endif %}
+  </div>
+  <br>
+  {% endfor %}
+</div>
+
+<div class="fixed-bottom-div">
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="prompt" maxlength="500" required id="id_prompt">
+    <button type="submit">Submit</button>
+  </form>
+</div>
+{% endblock %}
+
