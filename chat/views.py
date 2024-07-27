@@ -19,9 +19,7 @@ def index(request):
             prompt = form.cleaned_data['prompt']
             form = forms.Prompt()
 
-            data["log"].append({"type": "human", "content": prompt})
-
-            # send prompt to backend
+            # send prompt to textgen backend
 
     else:
         form = forms.Prompt()
